@@ -1,0 +1,61 @@
+{
+   "action": {
+      "default_icon": {
+         "16": "images/icon16-off.png",
+         "24": "images/icon24-off.png",
+         "32": "images/icon32-off.png"
+      }
+   },
+   "background": {
+      "service_worker": "js/eventPage.js",
+      "type": "module"
+   },
+   "commands": {
+      "_execute_action": {
+      },
+      "exe_active_cat": {
+         "description": "Execute the active profile"
+      },
+      "open_options": {
+         "description": "Open options"
+      },
+      "toggle_manual": {
+         "description": "Toggle manual mode"
+      }
+   },
+   "content_scripts": [ {
+      "all_frames": true,
+      "js": [ "js/autofill.js" ],
+      "match_about_blank": true,
+      "matches": [ "\u003Call_urls>" ],
+      "run_at": "document_end"
+   } ],
+   "default_locale": "en",
+   "description": "The most popular autofill extension, boosting productivity since 2010.",
+   "homepage_url": "https://docs.lightningautofill.com/",
+   "host_permissions": [ "\u003Call_urls>" ],
+   "icons": {
+      "128": "images/icon128.png",
+      "16": "images/icon16.png",
+      "24": "images/icon24.png",
+      "32": "images/icon32.png",
+      "48": "images/icon48.png",
+      "96": "images/icon96.png"
+   },
+   "key": "aMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAojlsXdreE44nXybCjw+LBLOThr4nQs/sBfjsvKXmAMd2BlzLK2mZuC03eLPBE9YQFaqCwPuJh0epWN0v9r8oSXHQ1tCWDMHor/iJNfLCaBnHsG7GPz8/rZJyKXSw5QAsWQlR778T6KT4WhHc6nHku/7sfjIRCYqtwwEGPhMqBni/GCDkDUtq26RIrKfOyTVBhTMJy66ag+CLTn3Hur1PyNCPhoNj4w9XAL0nWC4D2bn8FqNejVrs/1j3lSrTineZ+u/uhHW/IhXY76i4PX6AlkbJC8EiCMgb8bUfiXthNZ+xkirYwXKKImr6xzKfqDhZEzxYAXkTD9QRPcMSQBtYqQIDAQAB",
+   "manifest_version": 3,
+   "minimum_chrome_version": "120.0",
+   "name": "Lightning Autofill",
+   "oauth2": {
+      "client_id": "171872051662-m3bdmb4v1cl3og24ager32vsn6gp1dma.apps.googleusercontent.com",
+      "scopes": [ "https://www.googleapis.com/auth/drive.file", "https://www.googleapis.com/auth/userinfo.email" ]
+   },
+   "options_page": "options.html",
+   "permissions": [ "alarms", "contextMenus", "identity", "offscreen", "scripting", "sidePanel", "storage", "unlimitedStorage", "userScripts" ],
+   "update_url": "https://edge.microsoft.com/extensionwebstorebase/v1/crx",
+   "version": "14.14.5",
+   "web_accessible_resources": [ {
+      "matches": [ "\u003Call_urls>" ],
+      "resources": [ "css/wizard.css", "images/close*.png", "images/icon24.png", "sounds/*" ]
+   } ]
+}
